@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII GIF</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 4px;
+        }
+    </style>
+</head>
+<body>
+    <pre id="ascii"></pre>
+    <script>
+        const frames = {{ frames|safe }};
+        let currentFrame = 0;
+        
+        function showFrame() {
+            document.getElementById('ascii').textContent = frames[currentFrame];
+            currentFrame = (currentFrame + 1) % frames.length;
+        }
+        
+        setInterval(showFrame, 30); // Частота обновления кадров
+    </script>
+</body>
+</html>
