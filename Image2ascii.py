@@ -89,4 +89,4 @@ class Image2ascii():
             file.write(ascii_img)
         #print(ascii_img)
 if __name__=="__main__":
-    Image2ascii("files/alya.webp",4000).get_gray_ascii_image("files/test.txt")
+    Image2ascii("files/alya.webp",1000).get_colored_ascii_image("files/alya.txt")

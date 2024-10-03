@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <pre id="ascii"></pre>
+    <pre id="ascii" style="text-align: center;">
     <script>
         const frames = {{ frames|safe }};
         let currentFrame = 0;
@@ -25,5 +25,6 @@
         
         setInterval(showFrame, 30); // Частота обновления кадров
     </script>
+    </pre>
 </body>
 </html>

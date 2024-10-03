@@ -7,6 +7,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return flask.render_template("index.html",frames=Image2ascii("files/02.gif",600).gif_to_ascii_frames())
+    return flask.render_template("index.html",frames=Image2ascii("files/tenor.gif",600).gif_to_ascii_frames())
 if __name__ == "__main__":
     app.run(debug=True)
